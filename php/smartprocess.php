@@ -16,7 +16,7 @@
 	--------------------------------------------------------------------------- */
 	$sendername = strip_tags(trim($_POST["sendername"]));	
 	$emailaddress = strip_tags(trim($_POST["emailaddress"]));
-	$telephone = strip_tags(trim($_POST["telephone"]));
+	$telephone = strip_tags(trim($_POST["phonenumber"]));
 	$sendersubject = strip_tags(trim($_POST["sendersubject"]));
 	$sendermessage = strip_tags(trim($_POST["sendermessage"]));
     $captcha = strip_tags(trim($_POST["captcha"]));

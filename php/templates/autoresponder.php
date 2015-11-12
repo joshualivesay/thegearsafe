@@ -64,25 +64,6 @@ $automessage = '
                                         </td>
                                     </tr>
                                     
-                                    <tr>
-                                        <td style="background:#f9f9f9;border:1px solid #D8D8D8;border-top:none;padding:15px 10px" align="center">
-                                            
-                                            <table style="width:100%;max-width:650px" align="center">
-                                                <tbody>
-                                                    <tr>
-                                                        <td style="font-size:14px;line-height:20px;text-align:center;max-width:650px">
-                                                            <a href="'.$poweredby_url.'" style="text-decoration:none;color:#69696c" target="_blank">
-                                                                <span style="color:#00ce00;font-weight:bold;max-width:180px">POWERED BY:</span> 
-                                                                '.$poweredby_name.'
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            
-                                        </td>
-                                    </tr>
-                                    
                                 </tbody>
                             </table>
                         </td>
@@ -94,7 +75,7 @@ $automessage = '
                                 <tbody>
                                     <tr>
                                         <td style="color:#b4b4b4;font-size:11px;padding-top:10px;line-height:15px;font-family:arial">
-                                            <span> &copy; ELFLAIRE 2014 - '.$currYear.' - ALL RIGHTS RESERVED </span>
+                                            <span> &copy; TheGearSafe 2014 - '.$currYear.' - ALL RIGHTS RESERVED </span>
                                         </td>
                                     </tr>
                                 </tbody>
