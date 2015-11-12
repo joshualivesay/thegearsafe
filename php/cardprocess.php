@@ -15,6 +15,8 @@ include dirname(__FILE__).'/stripe/config.php';
       'currency' => 'usd'
   ));
 
+    include dirname(__FILE__).'/settings/settings.php';
+	include dirname(__FILE__).'/functions/emailValidation.php';
   	include dirname(__FILE__).'/phpmailer/PHPMailerAutoload.php';
   	include dirname(__FILE__).'/templates/orderalert.php';
 
