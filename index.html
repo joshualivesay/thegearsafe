@@ -149,7 +149,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 text-center col-centered">
-          <h2 class="uppercase">Keep your friends talking with this interesting and functional coversation piece.</h2>
+          <h2 class="uppercase">Keep your friends talking with this interesting and functional conversation piece.</h2>
         </div>
         <div class="title-line4 orange-4 less-margin align-center"></div>
       </div>
@@ -166,18 +166,18 @@
       <div class="row">
         <div class="col-md-5 col-md-offset-7 col-sm-8 col-sm-offset-4 text-inner clearfix align-left">
           <div class="text-box">
-            <h6 class=" text-orange-4 uppercase less-mar1">About the thing</h6>
+            <h6 class=" text-orange-4 uppercase less-mar1">About</h6>
             <h3 class="uppercase">The Gear Safe</h3>
             <div class="title-line-4 orange-4 less-margin"></div>
             <div class="clearfix"></div>
-            <p class="sub-title-left">Designed to function as a liquor or wine cabinet, this functioning exposed gear safe style cabinet is the perfect accent furniture for your modern home.</p>
+            <p class="sub-title-left">Designed to function as a liquor or wine cabinet, this fully functional exposed gear safe style cabinet is the perfect accent for your modern home.</p>
             <div class="col-md-6 col-xs-12">
               <div class="item-holder">
                 <div class="icon-plain-small left"> <span class="icon-layers"></span></div>
                 <div class="text-box-right less-padding-1">
-                  <h5>Percision Design</h5>
+                  <h5>Precision Design</h5>
                   <div class="divider-line solid light margin"></div>
-                  <p>Lorem ipsum dolor sit amet et justo lorem dolor consectetuer adipiscing elit Suspendisse et.</p>
+                  <p>This handcrafted keepsake is meticulously designed to last for years to come.</p>
                 </div>
               </div>
             </div>
@@ -188,7 +188,8 @@
                 <div class="icon-plain-small left"> <span class="icon-map"></span></div>
                 <div class="text-box-right less-padding-1">
                   <h5>Modern and Flexible</h5>
-                  <p>Solid wood construction. Flexible configuration. and something else.  It's an awesome deal.  Buy it!</p>
+                  <div class="divider-line solid light margin"></div>
+                  <p>Solid wood construction. Flexible configuration. and modern styling.</p>
                 </div>
               </div>
             </div>
@@ -196,7 +197,6 @@
             <div class="clearfix"></div>
             <br/>
             <br/>
-            $899.00 - Buy Now
             <form action="/charge" method="POST">
               <script
                       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -206,7 +206,11 @@
                       data-description="The Gear Safe"
                       data-zip-code="true"
                       data-amount="89900"
-                      data-locale="auto">
+                      data-locale="auto"
+                      data-shipping-address="true"
+                      data-billing-address="true"
+                      data-label="Buy Now ($899 - Shipping Included)"
+              >
               </script>
             </form>
           </div>
