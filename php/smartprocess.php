@@ -104,7 +104,7 @@
 		$mail = new PHPMailer();
 		$mail->isSendmail();
 		$mail->IsHTML(true);
-		$mail->From = $emailaddress;
+		$mail->From = 'noreply@thegearsafe.com';
 		$mail->CharSet = "UTF-8";
 		$mail->FromName = $sendername;
 		$mail->Encoding = "base64";
@@ -119,11 +119,10 @@
 		// Simply change recepients from false to true
 		// Then enter the recipients email addresses
 		// echo $message;
-		$recipients = false;
+		$recipients = true;
 		if($recipients == true){
 			$recipients = array(
-				"example@domain.com" => "Recipient Name",
-				"example@domain.com" => "Recipient Name"
+				"joshualivesay@gmail.com" => "Joshua Livesay"
 			);
 			
 			foreach($recipients as $email => $name){
@@ -161,8 +160,8 @@
 					
 					$automail = new PHPMailer();
 					$automail->isSendmail();
-					$automail->From = $receiver_email;
-					$automail->FromName = $receiver_name;
+					$automail->From = 'sales@thegearsafe.com';
+					$automail->FromName = 'The Gear Safe';
 					$automail->isHTML(true);                                 
 					$automail->CharSet = "UTF-8";
 					$automail->Encoding = "base64";

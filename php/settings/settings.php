@@ -14,7 +14,7 @@
 	 * For more than one email go to smartprocess.php then
 	 * Add addresses to the recipients section
 	------------------------------------------------------ */
-	$receiver_email = "joshualivesay@gmail.com";
+	$receiver_email = "sales@thegearsafe.com";
 	
 	/* If you want to redirect to another page after sending the form
 	 * Change the $redirectForm option below from (false) to (true)
@@ -43,5 +43,5 @@
 	/* If you want to automatically reply to the sender 
 	 * Change the autoresponder option below from (false) to (true)
 	-------------------------------------------------------------------- */	
-	$autoResponder = false;
+	$autoResponder = true;
 ?>
