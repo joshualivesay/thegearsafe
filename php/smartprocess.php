@@ -102,7 +102,12 @@
 		include dirname(__FILE__).'/templates/smartmessage.php';
 			
 		$mail = new PHPMailer();
-		$mail->isSendmail();
+		$mail->IsSMTP();
+        $mail->SMTPAuth = true;
+        $mail->Host = "smtp.sendgrid.com";
+        $mail->Port = 587;
+        $mail->Username = "thegearsafe";
+        $mail->Password = "MyGearSafepass1";
 		$mail->IsHTML(true);
 		$mail->From = 'noreply@thegearsafe.com';
 		$mail->CharSet = "UTF-8";

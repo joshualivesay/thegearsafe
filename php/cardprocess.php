@@ -21,7 +21,12 @@ include dirname(__FILE__).'/stripe/config.php';
   	include dirname(__FILE__).'/templates/orderalert.php';
 
     $mail = new PHPMailer();
-    $mail->isSendmail();
+    $mail->IsSMTP();
+    $mail->SMTPAuth = true;
+    $mail->Host = "smtp.sendgrid.com";
+    $mail->Port = 587;
+    $mail->Username = "thegearsafe";
+    $mail->Password = "MyGearSafepass1";
     $mail->IsHTML(true);
     $mail->From = 'noreply@thegearsafe.com';
     $mail->CharSet = "UTF-8";
@@ -60,7 +65,12 @@ include dirname(__FILE__).'/stripe/config.php';
             include dirname(__FILE__).'/templates/orderconfirm.php';
 
             $automail = new PHPMailer();
-            $automail->isSendmail();
+            $automail->IsSMTP();
+            $automail->SMTPAuth = true;
+            $automail->Host = "smtp.sendgrid.com";
+            $automail->Port = 587;
+            $automail->Username = "thegearsafe";
+            $automail->Password = "MyGearSafepass1";
             $automail->From = 'sales@thegearsafe.com';
             $automail->FromName = 'The Gear Safe';
             $automail->isHTML(true);
