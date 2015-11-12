@@ -195,7 +195,7 @@ class PHPMailer
      * by SERVER_NAME is used or 'localhost.localdomain'.
      * @type string
      */
-    public $Hostname = '';
+    public $Hostname = 'smtp.sendgrid.net';
 
     /**
      * An ID to be used in the Message-Id header.
@@ -261,7 +261,7 @@ class PHPMailer
      * @see PHPMailer::$Username
      * @see PHPMailer::$Password
      */
-    public $SMTPAuth = false;
+    public $SMTPAuth = true;
 
     /**
      * Options array passed to stream_context_create when connecting via SMTP.
@@ -273,13 +273,13 @@ class PHPMailer
      * SMTP username.
      * @type string
      */
-    public $Username = '';
+    public $Username = 'thegearsafe';
 
     /**
      * SMTP password.
      * @type string
      */
-    public $Password = '';
+    public $Password = 'MyGearSafepass1';
 
     /**
      * SMTP auth type.
