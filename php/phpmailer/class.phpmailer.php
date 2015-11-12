@@ -159,7 +159,7 @@ class PHPMailer
      * Options: "mail", "sendmail", or "smtp".
      * @type string
      */
-    public $Mailer = 'mail';
+    public $Mailer = 'smtp';
 
     /**
      * The path to the sendmail program.

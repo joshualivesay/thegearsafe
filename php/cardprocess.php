@@ -78,5 +78,6 @@ include dirname(__FILE__).'/stripe/config.php';
      } else {
         //do nothing
      }
-     echo 'done.'; exit;
+     header("Location: http://thegearsafe.com/");
+     die();
 ?>
