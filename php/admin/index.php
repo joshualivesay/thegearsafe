@@ -1,6 +1,6 @@
 <?php
 	require('check.php');
-	$orders = $db->fetch_all_array("SELECT * FROM Orders");
+	//$orders = $db->fetch_all_array("SELECT * FROM Orders");
 
 ?>
 <!DOCTYPE html>
@@ -55,7 +55,7 @@
                                 <div class="sftables">
                                     <div class="sftable-wrap">
                                         <h1>Orders </h1>
-            <?php print_r($orders); ?>
+            <?php //print_r($orders); ?>
                                     </div>
                                 </div><!-- .sftables -->
                             </div><!-- .smart-app-content -->
