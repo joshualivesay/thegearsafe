@@ -1,5 +1,5 @@
 <?php
-
+include dirname(__FILE__).'/functions/bootstrap.php';
 include dirname(__FILE__).'/stripe/config.php';
 
   $token  = $_POST['stripeToken'];
@@ -14,6 +14,8 @@ include dirname(__FILE__).'/stripe/config.php';
       'amount'   => $_POST['price'],
       'currency' => 'usd'
   ));
+
+    print_r_nice($charge);
 
     include dirname(__FILE__).'/settings/settings.php';
 	include dirname(__FILE__).'/functions/emailValidation.php';
