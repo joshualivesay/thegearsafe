@@ -1,5 +1,6 @@
 <?php
 	require('check.php');
+	include dirname(__FILE__).'/../functions/bootstrap.php';
 	require "dataprocess.php";
 ?>
 <!DOCTYPE html>
@@ -66,7 +67,8 @@
                             <div class="smart-app-content">
                                 <div class="sftables">
                                     <div class="sftable-wrap">
-                                        <h1> Orders </h1>
+                                        <h1>Orders </h1>
+
                                     </div>
                                 </div><!-- .sftables -->
                             </div><!-- .smart-app-content -->
