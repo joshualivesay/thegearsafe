@@ -15,17 +15,30 @@ include dirname(__FILE__).'/stripe/config.php';
       'currency' => 'usd'
   ));
 
+    if (isset($charge) && isset($charge->paid)) {
+        if ($charge->paid != 'true') {
+            //Handle the declined payment
+            exit;
+        }
+    }
 
     $db->query_insert("Order", array(
             'stripeCustomer' => $charge->customer,
             'stripeCharge'  => $charge->id,
             'last4' => $charge->source->last4,
             'fullName' => $_POST['stripeShippingName'],
-            'orderDate' => date('Y-m-d hh:mm:ss')
+            'orderDate' => date('Y-m-d hh:mm:ss'),
+            'address' => $_POST['stripeShippingAddressLine1'],
+            'city' => $_POST['stripeShippingAddressCity'],
+            'state' => $_POST['stripeShippingAddressState'],
+            'zip' => $_POST['stripeShippingAddressZip'],
+            'qty' => $_POST['qty'],
+            'cost' => $_POST['price']
+            'status' => 'Pending'
         ));
 
-    include dirname(__FILE__).'/settings/settings.php';
-	include dirname(__FILE__).'/functions/emailValidation.php';
+    $orderid = $db->inserted_id;
+
   	include dirname(__FILE__).'/phpmailer/PHPMailerAutoload.php';
   	include dirname(__FILE__).'/templates/orderalert.php';
 
@@ -97,6 +110,6 @@ include dirname(__FILE__).'/stripe/config.php';
      } else {
         //do nothing
      }
-     header("Location: http://thegearsafe.com/");
+     header("Location: http://thegearsafe.com/success.php?orderid=".$orderid);
      die();
 ?>

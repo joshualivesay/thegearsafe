@@ -11,7 +11,7 @@ function print_r_nice($array, $andHalt = true) {
     }
 }
 
-include dirname(__FILE__).'../settings/settings.php';
+include dirname(__FILE__).'/../settings/settings.php';
 include dirname(__FILE__).'/database.php';
 include dirname(__FILE__).'/emailValidation.php';
 
