@@ -33,7 +33,7 @@ include dirname(__FILE__).'/stripe/config.php';
             'state' => $_POST['stripeShippingAddressState'],
             'zip' => $_POST['stripeShippingAddressZip'],
             'qty' => $_POST['qty'],
-            'cost' => $_POST['price']
+            'cost' => $_POST['price'],
             'status' => 'Pending'
         ));
 
