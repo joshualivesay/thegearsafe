@@ -22,7 +22,7 @@ include dirname(__FILE__).'/stripe/config.php';
         }
     }
 
-    $db->query_insert("Order", array(
+    $orderRS = $db->query_insert("Order", array(
             'stripeCustomer' => $charge->customer,
             'stripeCharge'  => $charge->id,
             'last4' => $charge->source->last4,
@@ -37,7 +37,7 @@ include dirname(__FILE__).'/stripe/config.php';
             'status' => 'Pending'
         ));
 
-    $orderid = $db->inserted_id;
+    print_r_nice($orderRS);
 
   	include dirname(__FILE__).'/phpmailer/PHPMailerAutoload.php';
   	include dirname(__FILE__).'/templates/orderalert.php';
