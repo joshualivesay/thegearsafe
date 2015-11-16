@@ -1,7 +1,5 @@
 <?php
 	require('check.php');
-	$orders = $db->fetch_all_array("SELECT * FROM Orders");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +39,20 @@
         <div class="smart-admin">
             <div class="page-frame">
                 <div class="page">
-                <?php require('menu.php');?>
+                    <div class="offcanvas" role="navigation">
+                        <div class="top-toggle">
+                            <a href="#" class="toggle-smartadmin" ><i class="fa fa-bars"></i></a>  
+                        </div><!-- .top-toggle -->
+                        <div class="admin-profile">
+                            <span class="profile-pic"></span>
+                            <!--<span class="profile-user"><b>Hello:</b> Steve1455 </span>-->
+                        </div><!-- .admin-profile -->
+                        <ul class="smart-navigation">
+                            <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard </a></li>
+                            <li><a href="../formcsv.csv?v=v1"><i class="fa fa-download"></i> Download CSV </a></li>
+                            <li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout </a></li>
+                        </ul>
+                    </div><!-- end offcanvas -->
                     <div class="content-frame">    
                         <div class="swipe-panel" role="banner">
                             <a href="#" class="toggle-smartadmin" ><i class="fa fa-bars"></i></a>
@@ -54,10 +65,11 @@
                             <div class="smart-app-content">
                                 <div class="sftables">
                                     <div class="sftable-wrap">
-                                        <h1>Orders </h1>
-            <?php print_r($orders); ?>
-                                    </div>
-                                </div><!-- .sftables -->
+                                        <h1>Contact Form</h1>
+                                        <hr/>
+                                        <?php echo csvTable(); ?>
+                                    </div>        
+                                </div><!-- .sftables -->                            
                             </div><!-- .smart-app-content -->
                         </div><!-- end container -->
                     </div><!-- END .content-frame -->

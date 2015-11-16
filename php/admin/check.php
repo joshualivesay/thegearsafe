@@ -18,4 +18,10 @@
 	}
 	
 	$showDisplayName = $displayName;
+
+    include dirname(__FILE__).'/../functions/bootstrap.php';
+    require "dataprocess.php";
+
+    $newOrderCount = $db->query_first("SELECT count(id) FROM Order WHERE status = 'Pending'");
+    $oldOrderCount = $db->query_first("SELECT count(id) FROM Order WHERE status = 'Shipped'");
 ?>
