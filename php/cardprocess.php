@@ -15,7 +15,14 @@ include dirname(__FILE__).'/stripe/config.php';
       'currency' => 'usd'
   ));
 
-    print_r_nice($charge);
+
+    $db->query_insert("Order", array(
+            'stripeCustomer' => $charge->customer,
+            'stripeCharge'  => $charge->id,
+            'last4' => $charge->source->last4,
+            'fullName' => $_POST['stripeShippingName'],
+            'orderDate' => date('Y-m-d hh:mm:ss')
+        ));
 
     include dirname(__FILE__).'/settings/settings.php';
 	include dirname(__FILE__).'/functions/emailValidation.php';

@@ -2,9 +2,8 @@
 
 	if (!isset($_SESSION)) session_start(); 
 	if(!$_POST) exit;
-	
-	include dirname(__FILE__).'/settings/settings.php';
-	include dirname(__FILE__).'/functions/emailValidation.php';
+
+	include dirname(__FILE__).'/functions/bootstrap.php';
 	
 	
 	/* Current Date Year

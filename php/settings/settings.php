@@ -1,5 +1,15 @@
 <?php
 
+define('LIVE', ($_SERVER['LIVE'] == 'true') ? true : false);
+define('DB_USERNAME', $_SERVER['DB_USERNAME']);
+define('DB_PASSWORD', $_SERVER['DB_PASSWORD']);
+define('SENDGRID_USERNAME', $_SERVER['SENDGRID_USERNAME']);
+define('SENDGRID_PASSWORD', $_SERVER['SENDGRID_PASSWORD']);
+define('STRIPE_TEST_PK', $_SERVER['STRIPE_TEST_PK']);
+define('STRIPE_TEST_SK', $_SERVER['STRIPE_TEST_SK']);
+define('STRIPE_LIVE_PK', $_SERVER['STRIPE_LIVE_PK']);
+define('STRIPE_LIVE_SK', $_SERVER['STRIPE_LIVE_SK']);
+
 	/* Enter your name or company name below
 	 * You can also use your website URL
 	--------------------------------------------- */

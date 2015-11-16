@@ -10,3 +10,11 @@ function print_r_nice($array, $andHalt = true) {
         exit;
     }
 }
+
+include dirname(__FILE__).'../settings/settings.php';
+include dirname(__FILE__).'/database.php';
+include dirname(__FILE__).'/emailValidation.php';
+
+$db = new database();
+
+
