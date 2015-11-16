@@ -66,6 +66,15 @@
                             <div class="smart-app-content">
                                 <div class="sftables">
                                     <div class="sftable-wrap">
+                                        <h1> Orders </h1>
+                                    </div>
+                                </div><!-- .sftables -->
+                            </div><!-- .smart-app-content -->
+                        </div><!-- end container -->
+                        <div class="container">
+                            <div class="smart-app-content">
+                                <div class="sftables">
+                                    <div class="sftable-wrap">
                                         <?php echo csvTable(); ?>
                                     </div>        
                                 </div><!-- .sftables -->                            

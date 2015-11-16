@@ -27,7 +27,7 @@ include dirname(__FILE__).'/stripe/config.php';
             'stripeCharge'  => $charge->id,
             'last4' => $charge->source->last4,
             'fullName' => $_POST['stripeShippingName'],
-            'orderDate' => date('Y-m-d hh:mm:ss'),
+            'orderDate' => date('Y-m-d H:i:s'),
             'address' => $_POST['stripeShippingAddressLine1'],
             'city' => $_POST['stripeShippingAddressCity'],
             'state' => $_POST['stripeShippingAddressState'],
