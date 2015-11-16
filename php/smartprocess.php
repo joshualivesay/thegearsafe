@@ -18,7 +18,6 @@
 	$telephone = strip_tags(trim($_POST["phonenumber"]));
 	$sendersubject = strip_tags(trim($_POST["sendersubject"]));
 	$sendermessage = strip_tags(trim($_POST["sendermessage"]));
-    $captcha = strip_tags(trim($_POST["captcha"]));
 	
 /*	----------------------------------------------------------------------
 	: Prepare form field variables for CSV export
@@ -77,14 +76,7 @@
 		}
 	}
 	
-	// validate security captcha 
-	if(isset($_POST["captcha"])){
-		if (!$captcha) {
-			$errors[] = "You must enter the captcha code";
-		} else if (($captcha) != $_SESSION['gfm_captcha']) {
-			$errors[] = "Captcha code is incorrect";
-		}
-	}
+
 	
 	if ($errors) {
 		//Output errors in a list

@@ -1,5 +1,6 @@
 <?php
-	session_start(); 
+	session_start();
+	date_default_timezone_set('America/New_York');
 	if (!isset($_SESSION['loggedin'])) {
 		header("Location: login.php");
 		exit;
