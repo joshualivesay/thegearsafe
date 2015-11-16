@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 text-center col-centered">
-          <h2 class="uppercase">Keep your friends talking with this interesting and functional conversation piece.</h2>
+          <h2 class="uppercase">Your order has been placed</h2>
         </div>
         <div class="title-line4 orange-4 less-margin align-center"></div>
       </div>
@@ -29,11 +29,11 @@
       <div class="row">
         <div class="col-md-5 col-md-offset-7 col-sm-8 col-sm-offset-4 text-inner clearfix align-left">
           <div class="text-box">
-            <h6 class=" text-orange-4 uppercase less-mar1">About</h6>
-            <h3 class="uppercase">The Gear Safe</h3>
+            <h6 class=" text-orange-4 uppercase less-mar1">Details</h6>
+            <h3 class="uppercase">Your order is on the way!</h3>
             <div class="title-line-4 orange-4 less-margin"></div>
             <div class="clearfix"></div>
-            <p class="sub-title-left">Designed to function as a liquor or wine cabinet, this fully functional exposed gear safe style cabinet is the perfect accent for your modern home.</p>
+            <p class="sub-title-left">Order Number: <?php echo $orderid;?></p>
             <div class="col-md-6 col-xs-12">
               <div class="item-holder">
                 <div class="icon-plain-small left"> <span class="icon-layers"></span></div>
